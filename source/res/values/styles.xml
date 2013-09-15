@@ -1,0 +1,5 @@
+<resources>
+
+    <style name="Theme.SummSender" parent="Theme.Sherlock.Light.DarkActionBar"></style>
+
+</resources>

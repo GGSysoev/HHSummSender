@@ -1,0 +1,147 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"    
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SummaryActivity" >    
+    
+    <RelativeLayout
+        android:id="@+id/relative_layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <!-- for focus -->
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:hint="@string/name"
+            android:inputType="textCapWords" 
+            >
+        </EditText>
+
+        <EditText
+            android:id="@+id/et_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/et_name"
+            android:layout_marginTop="@+dimen/item_space"
+            android:layout_toLeftOf="@+id/pickDate"
+            android:ems="10"
+            android:hint="@string/birthdate"
+            android:inputType="date"
+            android:focusable="false" 
+            android:onClick="showDatePickerDialog"/>
+
+        <Button
+            android:id="@+id/pickDate"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/et_date"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/et_name"
+            android:layout_marginTop="@+dimen/item_space"
+            android:text="@string/choose_date" 
+            android:onClick="showDatePickerDialog"/>
+
+       <RadioGroup
+           android:id="@+id/rg_sex"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_alignParentLeft="true"
+           android:layout_alignParentRight="true"
+           android:layout_below="@+id/et_date"
+           android:layout_marginTop="@+dimen/item_space"
+           android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_man"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/man" />
+
+            <RadioButton
+                android:id="@+id/rb_woman"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/woman" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/et_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/rg_sex"
+            android:layout_marginTop="@+dimen/item_space"
+            android:ems="10"
+            android:hint="@string/desired_position"
+            android:inputType="textCapSentences"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/et_salary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/et_position"
+            android:layout_marginTop="@+dimen/item_space"
+            android:ems="10"
+            android:hint="@string/desired_salary"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/et_salary"
+            android:layout_marginTop="@+dimen/item_space"
+            android:ems="10"
+            android:hint="@string/phone_number"
+            android:singleLine="true"
+            android:inputType="phone" 
+            android:digits="0123456789+" />
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/et_phone"
+            android:layout_marginTop="@+dimen/item_space"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress" />
+
+        <TextView
+            android:id="@+id/tv_rub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_salary"
+            android:layout_alignBottom="@+id/et_salary"
+            android:layout_toRightOf="@+id/et_salary"
+            android:text="@string/rub"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+
+    </RelativeLayout>
+
+</ScrollView>

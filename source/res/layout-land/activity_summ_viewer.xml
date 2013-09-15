@@ -1,0 +1,88 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"    
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".SummaryActivity" >    
+    
+    <RelativeLayout
+        android:id="@+id/relative_layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <!-- for focus -->
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <TextView
+            android:id="@+id/tv_inf"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:padding="@+dimen/item_space"
+            android:background="@drawable/back" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/tv_app_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_inf"
+            android:layout_alignParentRight="true"
+            android:text="+79997773355" 
+            android:layout_marginTop="@+dimen/item_space"
+            android:layout_marginRight="10dp"
+            android:autoLink="phone"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+        <TextView
+            android:id="@+id/tv_app_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_app_number"
+            android:layout_below="@+id/tv_inf"
+            android:layout_alignParentLeft="true"
+            android:text="somemail@mail.ru" 
+            android:layout_marginTop="@+dimen/item_space"
+            android:layout_marginLeft="10dp"
+            android:autoLink="email"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <EditText
+            android:id="@+id/et_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/tv_app_email"
+            android:layout_marginTop="@+dimen/item_space"
+            android:ems="10"
+            android:inputType="textMultiLine" 
+            android:hint="@string/response"
+            android:minLines="5"
+            android:maxLines="8"
+            android:background="@android:drawable/editbox_background_normal">
+        </EditText>
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_response"
+            android:layout_marginTop="@+dimen/item_space"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/send_response"
+            android:onClick="sendResponse" />
+
+    </RelativeLayout>
+
+</ScrollView>

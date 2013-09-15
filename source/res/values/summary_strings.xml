@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="name">ФИО</string>
+    <string name="birthdate">Дата рождения</string>
+    <string name="choose_date">Выбрать</string>
+    <string name="sex">Пол</string>
+    <string name="man">Муж</string>
+    <string name="woman">Жен</string>
+    <string name="desired_position">Желаемая должность</string>
+    <string name="desired_salary">Зарплата</string>
+    <string name="rub">руб.</string>
+    <string name="phone_number">Контактный телефон</string>
+    <string name="email">Электронная почта</string>
+</resources>
